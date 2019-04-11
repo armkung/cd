@@ -1,0 +1,4 @@
+dependencies:
+  - name: flux
+    version: 0.9.0
+    repository: 'https://weaveworks.github.io/flux'

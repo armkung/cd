@@ -1,0 +1,26 @@
+release: dev
+namespace: dev
+
+api:
+  host: localhost
+  services:
+    demo:
+      enabled: true
+      hasConfigMap: false
+      hasSecret: false
+      name: demo
+      serviceName: demo
+      tier: backend
+      repository: armkung/demo
+      version:
+        v1:
+          tag: latest
+      latestVersion: v1
+      ingress:
+        enabled: true
+        port: http
+      port:
+        http: 80
+      health:
+        port: 80
+    

@@ -1,0 +1,4 @@
+{{- define "deployment.labels" }} 
+  {{- $_ := set .service "type" "deployment" }}
+  {{- include "labels" . }}
+{{- end }}
