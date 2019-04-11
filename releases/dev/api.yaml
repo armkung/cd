@@ -1,0 +1,16 @@
+apiVersion: flux.weave.works/v1beta1
+kind: HelmRelease
+metadata:
+  name: api-dev
+  namespace: dev
+  annotations:
+    flux.weave.works/automated: "true"
+    flux.weave.works/tag.chart-image: semver:~0.0.1
+spec:
+  releaseName: api-dev
+  chart:
+    git: https://github.com/armkung/gitops.git
+    path: charts/api
+    ref: master
+  values:
+    release: dev

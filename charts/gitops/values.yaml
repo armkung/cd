@@ -1,0 +1,15 @@
+flux:
+  nameOverride: gitops
+  helmOperator:
+    create: true
+  git:
+    url: "git@github.com:armkung/gitops.git"
+    user: "armkung"
+    email: "s.arm.kung@gmail.com"
+    branch: "master"
+    path: ""
+    chartsPath: "charts"
+    pollInterval: "1m"
+  registry:
+    pollInterval: "1m"
+    trace: true
